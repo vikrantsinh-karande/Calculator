@@ -6,9 +6,6 @@ public class Calculator
 	public static void main (String[] args)
 	{
 		Scanner IP = new Scanner(System.in);
-		int x,y,ans;
-		x = 17;
-		y = 7;
 		
 		System.out.println("Welcome to the Calculator ! \n");
 		System.out.println("Choose the below options:");
@@ -18,25 +15,23 @@ public class Calculator
 		
 		System.out.println("You chose option : " +Input);
 		
+		Calculator Obj = new Calculator();
+		
 		switch (Input) {
 		case 1:
-			ans = x + y;
-			System.out.println("Answer is = " +ans);
+			Addition(7,17);
 			break;
 			
 		case 2:
-			ans = x - y;
-			System.out.println("Answer is = " +ans);
+			Obj.Substraction(17,7);
 			break;
 		
 		case 3:
-			ans = x * y;
-			System.out.println("Answer is = " +ans);
+			Obj.Multiplication(7, 17);
 			break;
 			
 		case 4:
-			ans = x/y;
-			System.out.println("Answer is = "+ans);
+			Obj.Division(17, 7);
 			break;
 			
 		default:
@@ -44,5 +39,34 @@ public class Calculator
 			break;
 			
 		}
+	}
+	
+	static void Addition(int x,int y)
+	{
+		int ans;
+		
+		ans = x + y;
+		System.out.println("Answer is = " +ans);
+	}
+	
+	public void Substraction(int x,int y)
+	{
+		int ans;
+		ans = x - y;
+		System.out.println("Answer is = " +ans);
+	}
+	
+	public void Multiplication(int x, int y)
+	{
+		int ans;
+		ans = x * y;
+		System.out.println("Answer is = " +ans);
+	}
+	
+	public void Division(int x, int y)
+	{
+		int ans;
+		ans = x/y;
+		System.out.println("Answer is = "+ans);
 	}
 }
